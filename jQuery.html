@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>contoh Jquery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<button id="myButton">Klik Saya!</button>
+
+<script>
+    $(document).ready(function(){
+        $("#myButton").click(function(){
+            alert("Tombol telah diklik!");
+        });
+    });
+</script>
+
+</body>
+<style>
+    .highlight {
+        background-color: yellow;
+    }
+</style>
+</head>
+<body>
+
+<div id="myDiv" style="width: 200px; height: 100px; border: 1px solid black;">
+    Arahkan mouse ke sini untuk mengubah warna latar belakang!
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("#myDiv").mouseover(function(){
+            $(this).addClass("highlight");
+        });
+
+        $("#myDiv").mouseout(function(){
+            $(this).removeClass("highlight");
+        });
+    });
+</script>
+
+</body>
+</html>
+

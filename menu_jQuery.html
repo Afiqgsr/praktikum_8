@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Menu</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        
+    }
+    .menu {
+        list-style-type: none;
+        padding: 15px;
+        margin: 0;
+        background-color: aqua;
+    }
+    .menu li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .menu li a {
+        text-decoration: none;
+        color: #333;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.5s;
+    }
+    .menu li a:hover {
+        background-color: black;
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<ul class="menu">
+    <li><a href="#">Beranda</a></li>
+    <li><a href="#">Tentang</a></li>
+    <li><a href="#">Layanan</a></li>
+    <li><a href="#">Kontak</a></li>
+</ul>
+
+<script>
+    $(document).ready(function(){
+        $(".menu li a").click(function(e){
+            e.preventDefault(); // Menghentikan default behavior dari link
+            
+            // Menghapus class "active" dari semua link
+            $(".menu li a").removeClass("active");
+            
+            // Menambahkan class "active" ke link yang diklik
+            $(this).addClass("active");
+            
+            // Anda bisa menambahkan logika lain di sini, misalnya untuk navigasi atau tindakan lain
+        });
+    });
+</script>
+
+</body>
+</html>
